@@ -1,6 +1,8 @@
 
 <h1>All Thoughts</h1>
 <%= link_to 'New Post', new_post_path %>
+
+<%= link_to 'Back', controller: 'welcome', action: 'index' %>
 <table>
   <tr>
     <th>Message</th>
@@ -12,7 +14,7 @@
       <td><%= post.message %></td>
       <td>Acknowledgements <%= post.votes %></td>
       <td><%= link_to 'Show', post_path(post) %></td>
-      <td><%= link_to "upvote", upvote_post_path(:id => post.id), method: :put %></td>
+      <td><%= link_to "Upvote", upvote_post_path(:id => post.id), method: :put %></td>
     </tr>
   <% end %>
 </table>
