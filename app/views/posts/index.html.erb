@@ -1,0 +1,17 @@
+
+<h1>All Thoughts</h1>
+<%= link_to 'New Post', new_post_path %>
+<table>
+  <tr>
+    <th>Message</th>
+    <th>Acknowledgements</th>
+  </tr>
+ 
+  <% @posts.each do |post| %>
+    <tr>
+      <td><%= post.message %></td>
+      <td>Acknowledgements <%= post.votes %></td>
+      <td><%= link_to 'Show', post_path(post) %></td>
+    </tr>
+  <% end %>
+</table>

@@ -1,0 +1,14 @@
+
+<%= form_for :post, url: posts_path do |f| %>
+<p>Share your thoughts</p>
+<p>
+  <%= f.text_field :message %>
+</p>
+
+<p>
+  <%= f.submit %>
+</p>
+<%end %>
+
+
+<%= link_to 'Back', posts_path %>
