@@ -1,3 +1,93 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html{
+  margin: 0;
+  border: 0;
+  height: 100%;
+  font-family : 'Roboto'
+}
+
+body{
+  margin: 0;
+  border: 0;
+  height: 100%;
+  display: inline-block;
+  width: 100%;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+.container{
+         width: 100%;
+    height: 100%;
+    background-color: #bc99ff;
+    color: white;
+    background: linear-gradient(to right, #bc99ff 0%, #7f42f3 100%);
+}
+.welcome{
+  margin: 165px auto;
+  text-align: center;
+}
+.header{
+      height: 70px;
+    width: 85%;
+    margin: 0px 100px;
+}
+.left-nav{
+      float: left;
+    padding: 30px 82px;
+}
+.right-nav{
+      float: right;
+    padding: 30px 82px;
+}
+.primary{
+  display: inline-block;
+    margin: 40px;
+}
+.primary-btn{
+  text-decoration: none;
+    color: white;
+    border: 1px solid #50be95;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.primary-btn:hover{
+  background : #7dcaad;
+  border : none;
+  cursor: pointer;
+  transition: background .3s ease-in-out;
+}
+
+ /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+      .header{
+        margin: 0px;
+        width:100%;
+      }
+      .right-nav{
+        padding: 30px;
+      }
+      .left-nav{
+        padding: 30px;
+      }
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+       .header{
+        margin: 0px;
+        width: 100%;
+      }
+      .left-nav{
+        padding: 30px;
+      }
+      .right-nav{
+        padding: 30px;
+      }
+    }

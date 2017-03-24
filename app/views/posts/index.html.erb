@@ -3,18 +3,15 @@
 <%= link_to 'New Post', new_post_path %>
 
 <%= link_to 'Back', controller: 'welcome', action: 'index' %>
-<table>
-  <tr>
-    <th>Message</th>
-    <th>Acknowledgements</th>
-  </tr>
- 
+ <div>
   <% @posts.each do |post| %>
-    <tr>
-      <td><%= post.message %></td>
-      <td>Acknowledgements <%= post.votes %></td>
-      <td><%= link_to 'Show', post_path(post) %></td>
-      <td><%= link_to "Upvote", upvote_post_path(:id => post.id), method: :put %></td>
-    </tr>
+    <div>
+      <div>
+        <p><%= post.message %></p>
+        <span><%= link_to "Upvote", upvote_post_path(:id => post.id), method: :put %></span>
+      </div>
+      <span><%= post.votes %> Acknowledgements</span>
+        <%#<td><%= link_to 'Show', post_path(post) %></td>
+    </div>
   <% end %>
-</table>
+  </div>

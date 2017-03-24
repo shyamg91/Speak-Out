@@ -1,2 +1,12 @@
-<h1>Share to your hearts content</h1>
-<%= link_to 'Speak Out', controller: 'posts' %>
+<div class="container">
+  <div class="header">
+    <span class="left-nav">Speak Out</span>
+    <span class="right-nav"><%= link_to "What is this", :anchor => "belief" %></span>
+  </div>
+  <div class="welcome">
+    <h1>Speaking out is a lot better than containing it in.</h1>
+    <div class="primary">
+    <%= link_to 'Speak Out',{ controller: 'posts' }, class: "primary-btn" %>
+    </div>
+  </div>
+</div>
