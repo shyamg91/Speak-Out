@@ -1,16 +1,27 @@
-
-<h1>All Thoughts</h1>
-<%= link_to 'New Post', new_post_path %>
-
-<%= link_to 'Back', controller: 'welcome', action: 'index' %>
- <div>
-  <% @posts.each do |post| %>
-    <div>
-      <div>
-        <p><%= post.message %></p>
-        <span><%= link_to "Upvote", upvote_post_path(:id => post.id), method: :put %></span>
+<div style="padding: 50px 0px;text-align:center;color:white;
+  background-color: #bc99ff;
+  background: linear-gradient(to right, #bc99ff 0%, #7f42f3 100%);">
+  <div class="header">
+      <span class="left-nav" style="padding-top:10px;"><%= link_to 'Speak Out', controller: 'welcome', action: 'index' %></span>
+      <span class="right-nav" style="padding-top:10px;"><%= link_to 'Home', controller: 'welcome', action: 'index' %></span>
+    </div>
+    <%= form_for :post, url: posts_path do |f| %>
+        <p>
+          <%= f.text_field :message , :autofocus => true, :placeholder => "What's going on", :class => "post-input" %>
+        </p>
+        <%= f.submit 'Share', :class => "primary-btn"%>
+    <%end %>
+</div>
+ <div class="post-container">
+  <% Post.order(votes: :desc).each do |post| %>
+    <div class="post">
+      <div class="post-first">
+        <p class="post-message"><%= post.message %></p>
+        <p class="acknowledgements"><%= post.votes %> people have <span style="font-style:normal;padding: 0px 5px 0px 1px;"> 🤗 </span> this</p>
       </div>
-      <span><%= post.votes %> Acknowledgements</span>
+      <div class="post-second">
+      <span><%= link_to "🤗", upvote_post_path(:id => post.id), method: :put %></span>
+      </div>
         <%#<td><%= link_to 'Show', post_path(post) %></td>
     </div>
   <% end %>

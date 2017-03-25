@@ -2,8 +2,8 @@
 
 one:
   message: MyString
-  votes: 
+  votes: 1
 
 two:
   message: MyString
-  votes: 
+  votes: 1

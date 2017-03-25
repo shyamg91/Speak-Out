@@ -1,3 +1,112 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.post-container{
+    width: 100%;
+    margin: auto;
+    display: inline-block;
+    text-align: center;
+    margin-top: 30px;
+}
+.post{
+    width: 40%;
+    background: black;
+    display: flex;
+    color: white;
+    padding: 15px 0px 7px 0px;
+    margin: 15px auto;
+    border-radius: 8px;
+}
+.post-message{
+    width: 80%;
+    display: inline-block;
+    text-align: left;
+    margin: 0px;
+}
+.acknowledgements{
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 46px;
+    font-size: 12px;
+    font-style: italic;
+    padding: 14px 0px 10px 0px;
+}
+.post-input{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #fff;
+    background: none;
+    font-size: 20px;
+    outline: none;
+    color:white;
+    width: 40%;
+}
+.post-first{
+    width: 78%;
+    float: left;
+}
+.post-second{
+    width: 20%;
+    float: right;
+    height: 100%;
+    font-size: 38px;
+    line-height: 1.2;
+    border-left: 1px solid #fff;
+    vertical-align: middle;
+    text-align: center;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #fff;
+  opacity: .3;
+  text-align: left;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #fff;
+  opacity: .3;
+  text-align: left;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #fff;
+  opacity: .3;
+  text-align: left;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #fff;
+  opacity: .3;
+  text-align: left;
+}
+
+ /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+      .post{
+        width: 80%;
+      }
+      .acknowledgements{
+        margin-left: 26px;
+      }
+      .post-message{
+        font-size: 14px;
+      }
+      .post-input{
+        width: 60%;
+      }
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+      .post{
+        width: 80%;
+      }
+      .acknowledgements{
+        margin-left: 26px;
+      }
+      .post-message{
+        font-size: 14px;
+      }
+      .post-input{
+        width: 60%;
+      }
+    }
